@@ -130,7 +130,7 @@ class BBCodeParser extends TextParser
         $config = parse_ini_file('BBCodeParser.ini', true);
         $options = $config['SSHTMLBBCodeParser'];
 
-        require_once BBCODEPARSER_PATH . '/thirdparty/HTML_BBCodeParser2/HTML/BBCodeParser2.php';
+        require_once 'HTML_BBCodeParser2/HTML/BBCodeParser2.php';
 
         $p = new HTML_BBCodeParser2($options);
         $this->content = $p->qparse($this->content);
